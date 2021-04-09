@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: ea526c039580bcf4bbf4b46cfff798b2
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: News701 BT
+  fontNames:
+  - News701 BT
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: b2d0d6a5ef4ae60408b241f8871d64b9, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

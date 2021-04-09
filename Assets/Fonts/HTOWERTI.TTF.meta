@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: 73472bc4688db764d9a1012a61cd001f
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: High Tower Text
+  fontNames:
+  - High Tower Text
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 8171cd3bf11c77e47a10097aea6f9270, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

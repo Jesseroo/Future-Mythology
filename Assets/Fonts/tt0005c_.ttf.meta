@@ -1,0 +1,24 @@
+fileFormatVersion: 2
+guid: 3e3193b5cba4b8e41b8cad07f94b52be
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Swis721 WGL4 BT
+  fontNames:
+  - Swis721 WGL4 BT
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 9865c266e35055640bd44266d5c95092, type: 3}
+  - {fileID: 12800000, guid: b23f05d7c9f65f3499ec9c0fa82073c6, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

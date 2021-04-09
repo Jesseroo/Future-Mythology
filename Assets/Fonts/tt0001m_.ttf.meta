@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: 1c72447386ee369469aef64255b9ee8e
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Swis721 Lt BT
+  fontNames:
+  - Swis721 Lt BT
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 586ecca268b9bb1488f86a4c79f56c4f, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
