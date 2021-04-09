@@ -133,11 +133,16 @@ MonoBehaviour:
   rb: {fileID: 673137244275150584}
   shotspeed: 50
   health: 3
-  canHit: 1
   skulls:
   - {fileID: 1562543801463262528, guid: 1a4e018dd2879d34f880ec4def7bad94, type: 3}
   - {fileID: 7577306465404782585, guid: b3824b56de6a364468f741a6094c993b, type: 3}
   - {fileID: 4022558126143214028, guid: 60cc9ed8208b1814eaa6ca171e6e7169, type: 3}
+  flashColor: {r: 1, g: 0, b: 0, a: 0.8156863}
+  regularColor: {r: 1, g: 1, b: 1, a: 1}
+  flashDuration: 0.07
+  numofflashes: 4
+  TriggerCollider: {fileID: 673137244275150587}
+  mySprite: {fileID: 673137244275150566}
   GameOver: {fileID: 4762878598394046040, guid: 3ab56ab6db0dad943af9a5b4222fc0d1,
     type: 3}
   currentHealth: 3

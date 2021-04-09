@@ -30,7 +30,6 @@ public class BadBullet : MonoBehaviour
         {
             col.gameObject.GetComponent<Death>().damage();
             Destroy(gameObject);
-            StartCoroutine("invuln");
         }
         if (col.gameObject.tag == "Bounds")
         {

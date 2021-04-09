@@ -19,6 +19,13 @@ public class Death : MonoBehaviour
     int tnow;
     public GameObject[] skulls;
 
+    public Color flashColor;
+    public Color regularColor;
+    public float flashDuration;
+    public int numofflashes;
+    public Collider2D TriggerCollider;
+    public SpriteRenderer mySprite;
+
     public GameOverScreen GameOver;
 
     public static int maxHealth = 3;
@@ -60,19 +67,22 @@ public class Death : MonoBehaviour
             GameOver.Setup();
             Destroy(gameObject);
         }
+        else StartCoroutine(invuln());
     }
 
     IEnumerator invuln()
     {
-        Physics2D.IgnoreLayerCollision(10, 9, true);
-        Physics2D.IgnoreLayerCollision(10, 11, true);
-        c.a = .5f;
-        rend.material.color = c;
-        yield return new WaitForSeconds(3f);
-        Physics2D.IgnoreLayerCollision(10, 9, false);
-        Physics2D.IgnoreLayerCollision(10, 11, false);
-        c.a = 1f;
-        rend.material.color = c;
+        int temp = 0;
+        TriggerCollider.enabled = false;
+        while (temp < numofflashes)
+        {
+            mySprite.color = flashColor;
+            yield return new WaitForSeconds(flashDuration);
+            mySprite.color = regularColor;
+            yield return new WaitForSeconds(flashDuration);
+            temp++;
+        }
+        TriggerCollider.enabled = true;
     }
 
     public void healthUpdate(int health)
