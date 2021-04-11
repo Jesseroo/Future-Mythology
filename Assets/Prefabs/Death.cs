@@ -73,7 +73,9 @@ public class Death : MonoBehaviour
     IEnumerator invuln()
     {
         int temp = 0;
-        TriggerCollider.enabled = false;
+        //TriggerCollider.enabled = false;
+        Physics2D.IgnoreLayerCollision(9, 10, true);
+        Physics2D.IgnoreLayerCollision(11, 10, true);
         while (temp < numofflashes)
         {
             mySprite.color = flashColor;
@@ -82,7 +84,9 @@ public class Death : MonoBehaviour
             yield return new WaitForSeconds(flashDuration);
             temp++;
         }
-        TriggerCollider.enabled = true;
+        //TriggerCollider.enabled = true;
+        Physics2D.IgnoreLayerCollision(9, 10, false);
+        Physics2D.IgnoreLayerCollision(11, 10, false);
     }
 
     public void healthUpdate(int health)
