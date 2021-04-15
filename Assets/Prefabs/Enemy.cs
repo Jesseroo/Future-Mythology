@@ -16,7 +16,7 @@ public class Enemy : MonoBehaviour
     //bool initiated = false;
 
     public bool hasBar;
-    public bool canShoot;
+    public bool canShoot, canAim;
     public float fireRate;
     public static int maxHealth;
     public int currentHealth;
