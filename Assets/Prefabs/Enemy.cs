@@ -12,6 +12,9 @@ public class Enemy : MonoBehaviour
     public float xSpeed;
     public float ySpeed;
     public bool canDamage;
+    public bool currLevel = false;
+    
+    public bool isJupiter;
 
     //bool initiated = false;
 
@@ -54,7 +57,8 @@ public class Enemy : MonoBehaviour
         //{
         //    createEnemy();
         //}
-        rb.velocity = new Vector2(xSpeed * -1, ySpeed);
+        if(currLevel)
+            rb.velocity = new Vector2(xSpeed * -1, ySpeed);
 
         if(canShoot && delay > 10 * fireRate)
         {
@@ -82,6 +86,10 @@ public class Enemy : MonoBehaviour
 
     void Die()
     {
+        if (hasBar)
+        {
+           LevelManager.levelManager.nextLevel();
+        }
         Destroy(gameObject);
     }
 

@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &458751584068819139
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3448443952550175644}
+  m_Layer: 12
+  m_Name: a
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3448443952550175644
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 458751584068819139}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.57, y: 0.52, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5297640553071583495}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8078824109091920012
 GameObject:
   m_ObjectHideFlags: 0
@@ -12,9 +42,10 @@ GameObject:
   - component: {fileID: 5545247223651520658}
   - component: {fileID: -421751477502467616}
   - component: {fileID: 378716132202140763}
-  m_Layer: 0
+  - component: {fileID: 3792166896730279098}
+  m_Layer: 12
   m_Name: TempJupiter
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29,7 +60,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 42.76, y: -3.43, z: 0}
   m_LocalScale: {x: 0.5117, y: 0.5117, z: 0.5117}
-  m_Children: []
+  m_Children:
+  - {fileID: 3448443952550175644}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -316,3 +348,32 @@ PolygonCollider2D:
       - {x: 0.41, y: -3.9099998}
       - {x: 0.59, y: -3.8799999}
       - {x: 0.84999996, y: -3.82}
+--- !u!114 &3792166896730279098
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8078824109091920012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4b40676e3ed3274f932b2eabd5adbc9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  badBullet: {fileID: 7241206260606468691, guid: aa8aeb70010a7a1488daaf5ea7058136,
+    type: 3}
+  delay: 0
+  xSpeed: 3
+  ySpeed: 0
+  canDamage: 0
+  currLevel: 0
+  isJupiter: 0
+  hasBar: 1
+  canShoot: 1
+  canAim: 0
+  fireRate: 5
+  currentHealth: 0
+  healthbar: {fileID: 0}
+  rb: {fileID: -421751477502467616}
+  SecondaryShot: {fileID: 1287262092315992429, guid: 82328b4e9c08e79408ce048406e8eefe,
+    type: 3}
