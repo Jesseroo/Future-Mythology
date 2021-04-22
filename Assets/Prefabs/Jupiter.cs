@@ -46,21 +46,30 @@ public class Jupiter : Enemy
     void Update()
     {
         rb.velocity = new Vector2(xSpeed * -1, ySpeed);
-        if (delay % 120 == 0 && canDamage && delay % 240 != 0)
+        if (!phase2)
+        {
+            if (delay % 120 == 0 && canDamage && delay % 240 != 0)
+            {
+                Shoot();
+            }
+            else if (delay % 240 == 0)
+            {
+                burst = true;
+            }
+            if (delay % 245 == 0)
+            {
+                burst = false;
+            }
+            if (burst && canDamage)
+            {
+                Shoot();
+            }
+        }
+
+        else if(phase2 && delay > 10 * fireRate)
         {
             Shoot();
-        }
-        else if (delay % 240 == 0)
-        {
-            burst = true;
-        }
-        if (delay % 245 == 0)
-        {
-            burst = false;
-        }
-        if (burst && canDamage)
-        {
-            Shoot();
+            delay = 0;
         }
         delay++;
 
@@ -71,6 +80,8 @@ public class Jupiter : Enemy
             if (hasBar)
                 healthbar.SetMaxHealth(maxHealth);
             ySpeed = 5;
+            badBullet = SecondaryShot;
+            phase2 = true;
         }
 
     }

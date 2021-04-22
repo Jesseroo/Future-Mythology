@@ -133,11 +133,13 @@ MonoBehaviour:
   xSpeed: 4
   ySpeed: 0
   canDamage: 1
+  currLevel: 0
+  isJupiter: 0
   hasBar: 0
   canShoot: 1
   canAim: 1
   fireRate: 20
-  currentHealth: 6
+  currentHealth: 4
   healthbar: {fileID: 0}
 --- !u!58 &-6216874999426239834
 CircleCollider2D:
