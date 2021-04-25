@@ -371,7 +371,7 @@ MonoBehaviour:
   hasBar: 1
   canShoot: 1
   canAim: 0
-  fireRate: 7
+  fireRate: 10
   currentHealth: 0
   healthbar: {fileID: 0}
   rb: {fileID: -421751477502467616}

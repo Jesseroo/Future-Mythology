@@ -5,7 +5,7 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     Rigidbody2D rb;
-    int dir = 1;
+    public float dir = 1f;
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
