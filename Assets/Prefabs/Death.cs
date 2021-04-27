@@ -103,6 +103,7 @@ public class Death : MonoBehaviour
     {
         delay = 0;
         Instantiate(Bullet, a.transform.position, Quaternion.identity);
+        FindObjectOfType<AudioManager>().Play("Shoot");
     }
 
 }
