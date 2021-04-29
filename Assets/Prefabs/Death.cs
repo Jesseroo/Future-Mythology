@@ -59,6 +59,8 @@ public class Death : MonoBehaviour
 
     public void damage()
     {
+
+        FindObjectOfType<AudioManager>().Play("OW");
         health--;
         currentHealth--;
         healthUpdate(health);

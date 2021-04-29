@@ -5675,11 +5675,19 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 6e720a8e29db6aa45872b0b96a332c1f, type: 3}
     volume: 1
     pitch: 3
+    loop: 0
     source: {fileID: 0}
   - name: Song
     clip: {fileID: 8300000, guid: 1c64f90a5a6a23b45ab2af008c0b29dd, type: 3}
+    volume: 0.25
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: OW
+    clip: {fileID: 8300000, guid: 5fb4b89b1bee8bb4da7e9790e08e9f88, type: 3}
     volume: 1
     pitch: 1
+    loop: 0
     source: {fileID: 0}
 --- !u!4 &1960190546
 Transform:
