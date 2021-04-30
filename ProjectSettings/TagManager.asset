@@ -9,6 +9,7 @@ TagManager:
   - KillPlane
   - BossTrigger
   - Boss Bounds
+  - Bullet
   layers:
   - Default
   - TransparentFX

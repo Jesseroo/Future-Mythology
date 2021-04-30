@@ -6,14 +6,19 @@ public class Enemy : MonoBehaviour
 {
     Rigidbody2D rb;
 
+   
+
     public GameObject badBullet;
+    public GameObject bossTrigger;
     GameObject a;
     public int delay = 0;
     public float xSpeed;
     public float ySpeed;
     public bool canDamage;
     public bool currLevel = false;
-    
+
+    public AudioManager AM;
+
     public bool isJupiter;
 
     //bool initiated = false;
@@ -23,7 +28,7 @@ public class Enemy : MonoBehaviour
     public float fireRate;
     public static int maxHealth;
     public int currentHealth;
-
+    public GameObject explosionRef;
     public HealthBar healthbar;
 
     private void Awake()
@@ -88,7 +93,16 @@ public class Enemy : MonoBehaviour
     {
         if (hasBar)
         {
+            GameObject explosion = (GameObject)Instantiate(explosionRef);
+            explosion.transform.position = new Vector3(transform.position.x, transform.position.y + .3f, transform.position.z);
            LevelManager.levelManager.nextLevel();
+            bossTrigger.SetActive(true);
+        }
+        if (hasBar && !isJupiter)
+        {
+            AM.Stop("Song");
+            AM.Play("Song End");
+            AM.Play("Song 2");
         }
         Destroy(gameObject);
     }

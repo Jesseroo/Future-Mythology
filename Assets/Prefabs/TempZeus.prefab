@@ -695,12 +695,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   badBullet: {fileID: 7241206260606468691, guid: aa8aeb70010a7a1488daaf5ea7058136,
     type: 3}
+  bossTrigger: {fileID: 8439630822789777482, guid: ba58f354efd4e7d43b5a7057c8bdd8f0,
+    type: 3}
   delay: 0
   xSpeed: 3
   ySpeed: 0
   canDamage: 0
+  currLevel: 0
+  isJupiter: 0
   hasBar: 1
   canShoot: 1
+  canAim: 0
   fireRate: 5
   currentHealth: 0
   healthbar: {fileID: 3790116718372084750, guid: 037513e442b8b1846beddd2af1ff5f4e,
