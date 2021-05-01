@@ -16,6 +16,7 @@ public class Enemy : MonoBehaviour
     public float ySpeed;
     public bool canDamage;
     public bool currLevel = false;
+    public GameOverScreen Win;
 
     public AudioManager AM;
 
@@ -79,6 +80,7 @@ public class Enemy : MonoBehaviour
     {
         if(col.gameObject.tag == "Player")
         {
+            FindObjectOfType<AudioManager>().Play("OW");
             col.gameObject.GetComponent<Death>().damage();
             StartCoroutine("invuln");
             Die();
@@ -93,8 +95,8 @@ public class Enemy : MonoBehaviour
     {
         if (hasBar)
         {
-            GameObject explosion = (GameObject)Instantiate(explosionRef);
-            explosion.transform.position = new Vector3(transform.position.x, transform.position.y + .3f, transform.position.z);
+            GameObject explosion = Instantiate(explosionRef);
+            explosion.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
            LevelManager.levelManager.nextLevel();
             bossTrigger.SetActive(true);
         }
@@ -103,6 +105,10 @@ public class Enemy : MonoBehaviour
             AM.Stop("Song");
             AM.Play("Song End");
             AM.Play("Song 2");
+        }
+        if (isJupiter)
+        {
+            Win.Setup();
         }
         Destroy(gameObject);
     }

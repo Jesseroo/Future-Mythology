@@ -28,6 +28,7 @@ public class BadBullet : MonoBehaviour
     {
         if (col.gameObject.tag == "Player")
         {
+            FindObjectOfType<AudioManager>().Play("OW");
             col.gameObject.GetComponent<Death>().damage();
             Destroy(gameObject);
         }
